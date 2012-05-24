@@ -26,12 +26,19 @@ set complete=.,w,b,u,U,t,i,d    " Do lots of scanning on tab completion
 set updatecount=100             " Write swap file to disk every 100 chars
 set directory=~/.vim/swap       " Directory to use for the swap file
 set diffopt=filler,iwhite       " In diff mode, ignore whitespace changes and align unchanged lines
+set history=100                 " Remember 100 commands
+set nrformats+=alpha            " Allow incrementing and decrementing letters
+                                " - the utility of this is limited by the Tim
+                                " Pope plugin that increments Roman Numerals,
+                                " but it's still nice to have.
 
 " Indentation and tabbing
 set autoindent smartindent
 set smarttab                    " Make <tab> and <backspace> smarter
-set tabstop=8
-set shiftwidth=8                " Indents of 8 spaces
+set expandtab
+set tabstop=2
+set shiftwidth=2
+set textwidth=80
 
 " viminfo: remember certain things when we exit
 " (http://vimdoc.sourceforge.net/htmldoc/usr_21.html)
@@ -80,6 +87,7 @@ map <M-j> :bn<cr>
 map <M-k> :bp<cr>
 map <C-PageDown> :cnext<cr>
 map <C-PageUp> :cprev<cr>
+map<LEADER>t :tabnew<CR>
 
 """""""""""""""""""""""""
 " Plugins
