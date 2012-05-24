@@ -85,7 +85,8 @@ map <C-PageUp> :cprev<cr>
 " Plugins
 """""""""""""""""""""""""
 nnoremap <C-g> :NERDTreeToggle<cr>
-let NERDTreeIgnore=[ '\.pyc$', '\.pyo$', '\.py\$class$', '\.obj$', '\.o$', '\.so$', '\.egg$', '^\.git$' ]
+let NERDTreeIgnore=['\.pyc$', '\.pyo$', '\.py\$class$', '\.obj$', '\.o$', '\.so$', 
+    \ '\.egg$', '^\.git$', '\~$', '\.cmi', '\.cmo']
 let NERDTreeHighlightCursorline=1
 let NERDTreeShowBookmarks=1
 let NERDTreeShowFiles=1
@@ -103,9 +104,11 @@ let g:miniBufExplMapCTabSwitchBufs = 1
 let g:miniBufExplVSplit = 20
 
 let g:syntastic_enable_signs=1
+let g:syntastic_check_on_open=1
+" C and Scala take too long to run, and scss misses imports
 let g:syntastic_mode_map = { 'mode': 'active',
                            \ 'active_filetypes': [],
-                           \ 'passive_filetypes': ['c', 'scss'] }
+                           \ 'passive_filetypes': ['c', 'scss', 'scala'] }
 
 let g:quickfixsigns_classes=['qfl', 'vcsdiff', 'breakpoints']
 
