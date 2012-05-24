@@ -146,6 +146,25 @@ function! CleanClose(tosave)
   exe "bd!".todelbufNr
 endfunction
 
+" http://stackoverflow.com/questions/2182427/right-margin-in-vim
+function! s:ToggleColorColumn()
+    if s:color_column_old == 0
+        let s:color_column_old = &colorcolumn
+        windo let &colorcolumn = 0
+    else
+        windo let &colorcolumn=s:color_column_old
+        let s:color_column_old = 0
+    endif
+endfunction
+
+if exists('+colorcolumn')
+  set colorcolumn=81
+  let s:color_column_old = 0
+  nnoremap <Leader>c :call <SID>ToggleColorColumn()<cr>
+else
+  au BufWinEnter * HighlightLongLines
+endif
+
 " When opening a file, always jump to the last cursor position
 autocmd BufReadPost *
     \ if line("'\"") > 0 && line ("'\"") <= line("$") |
