@@ -1,3 +1,7 @@
+[submodule "bundle/git"]
+	path = bundle/git
+	url = https://github.com/tpope/vim-git.git
+	ignore = dirty
 [submodule "bundle/lesscss"]
 	path = bundle/lesscss
 	url = git://gist.github.com/369178.git
