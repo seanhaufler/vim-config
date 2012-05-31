@@ -131,6 +131,8 @@ noremap <Leader>t= :Tabularize /=<CR>
 noremap <Leader>t: :Tabularize /^[^:]*:\zs/l0l1<CR>
 noremap <Leader>t> :Tabularize /=><CR>
 
+nnoremap <Leader>b :TagbarToggle<CR>
+
 """""""""""""""""""""""""
 " Custom functions
 """""""""""""""""""""""""
