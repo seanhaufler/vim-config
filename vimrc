@@ -21,6 +21,7 @@ colorscheme molokai
 filetype plugin indent on       " Do filetype detection and load custom file plugins and indent files
 set hidden                      " Don't abandon buffers moved to the background
 set wildmenu                    " Enhanced completion hints in command line
+set wildmode=list:longest,full  " Complete longest common match and show possible matches and wildmenu
 set backspace=eol,start,indent  " Allow backspacing over indent, eol, & start
 set complete=.,w,b,u,U,t,i,d    " Do lots of scanning on tab completion
 set updatecount=100             " Write swap file to disk every 100 chars
