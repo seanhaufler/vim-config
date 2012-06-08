@@ -88,7 +88,6 @@ map <M-j> :bn<cr>
 map <M-k> :bp<cr>
 map <C-PageDown> :cnext<cr>
 map <C-PageUp> :cprev<cr>
-map<LEADER>t :tabnew<CR>
 
 """""""""""""""""""""""""
 " Plugins
