@@ -138,25 +138,6 @@ nnoremap <Leader>b :TagbarToggle<CR>
 """""""""""""""""""""""""
 :command -bar -nargs=1 OpenURL :!firefox <args>
 
-nmap fc :call CleanClose(1)<cr>
-nmap fq :call CleanClose(0)<cr>
-function! CleanClose(tosave)
-  if (a:tosave == 1)
-      w!
-  endif
-  let todelbufNr = bufnr("%")
-  let newbufNr = bufnr("#")
-  if ((newbufNr != -1) && (newbufNr != todelbufNr) && buflisted(newbufNr))
-      exe "b".newbufNr
-  else
-      bnext
-  endif
-  if (bufnr("%") == todelbufNr)
-      new
-  endif
-  exe "bd!".todelbufNr
-endfunction
-
 " http://stackoverflow.com/questions/2182427/right-margin-in-vim
 function! s:ToggleColorColumn()
     if s:color_column_old == 0
