@@ -32,4 +32,4 @@ update:
 	git submodule sync
 	git submodule update --init
 
-.PHONY: install update
+.PHONY: all install update
