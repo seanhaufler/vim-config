@@ -80,12 +80,12 @@ let mapleader=","
 let localmapleader=","
 map <Leader>ss :setlocal spell!<cr>
 map <Leader>/ :nohlsearch<cr>
-map <M-[> :tprev<CR>
-map <M-]> :tnext<CR>
+map <C-[> :tprev<CR>
+map <C-]> :tnext<CR>
 vnoremap . :normal .<CR>
 vnoremap @ :normal! @
-map <M-j> :bn<cr>
-map <M-k> :bp<cr>
+map <C-j> :bn<cr>
+map <C-k> :bp<cr>
 map <C-PageDown> :cnext<cr>
 map <C-PageUp> :cprev<cr>
 
