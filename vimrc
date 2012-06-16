@@ -156,7 +156,7 @@ endfunction
 if exists('+colorcolumn')
   set colorcolumn=81
   let s:color_column_old = 0
-  nnoremap <Leader>c :call <SID>ToggleColorColumn()<cr>
+  nnoremap <Leader>m :call <SID>ToggleColorColumn()<cr>
 else
   au BufWinEnter * HighlightLongLines
 endif
