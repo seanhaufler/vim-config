@@ -78,12 +78,20 @@ let xml_use_xhtml = 1
 " Keybindings to native vim features
 let mapleader=","
 let localmapleader=","
-map <Leader>ss :setlocal spell!<cr>
+
+nmap <Leader>s :%s/
+vmap <Leader>s :s/
 map <Leader>/ :nohlsearch<cr>
-map <C-[> :tprev<CR>
-map <C-]> :tnext<CR>
+map <Leader>p :setlocal spell!<cr>
+
+" Make Y consistent with D and C
+map Y y$
+
+map <Leader>v :vsp<CR>
+
 vnoremap . :normal .<CR>
 vnoremap @ :normal! @
+
 map <C-j> :bn<cr>
 map <C-k> :bp<cr>
 map <C-PageDown> :cnext<cr>
