@@ -187,3 +187,6 @@
 [submodule "bundle/soy"]
 	path = bundle/soy
 	url = https://github.com/duganchen/vim-soy.git
+[submodule "bundle/listmaps"]
+	path = bundle/listmaps
+	url = https://github.com/vim-scripts/listmaps.vim.git
