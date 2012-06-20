@@ -197,3 +197,4 @@ set shortmess+=A
 
 " Toggle paste mode while in insert mode with F12
 set pastetoggle=<F12>
+map <F12> :set invpaste paste?<CR>
