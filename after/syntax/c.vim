@@ -1,8 +1,3 @@
-syn match ErrorLeadSpace /^ \+/
-syn match ErrorTailSpace /\s\+$/
-match Error80 /\%>80v.\+/
-set textwidth=78
-
 syn keyword cOperator likely unlikely __typeof__ __builtin_constant_p
 syn keyword cOperator BUG BUG_ON assert_spin_locked might_sleep WARN_ON WARN
 syn keyword cStorageClass __attribute__ __always_inline __user
