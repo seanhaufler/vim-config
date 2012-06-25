@@ -85,15 +85,13 @@ map <Leader>/ :nohlsearch<cr>
 map <Leader>p :setlocal spell!<cr>
 
 " Make Y consistent with D and C
-map Y y$
+noremap Y y$
 
 map <Leader>v :vsp<CR>
 
 vnoremap . :normal .<CR>
 vnoremap @ :normal! @
 
-map <C-j> :bn<cr>
-map <C-k> :bp<cr>
 map <C-PageDown> :cnext<cr>
 map <C-PageUp> :cprev<cr>
 
