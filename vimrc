@@ -77,28 +77,59 @@ let html_use_css = 1
 "let use_xhtml = 1
 let xml_use_xhtml = 1
 
-" Keybindings to native vim features
 " Save/restore view on close/open (folds, cursor, etc.)
 au BufWinLeave *.* silent! mkview
 au BufWinEnter *.* silent! loadview
+
+"""""""""""""""""""""""""
+" Keybindings
+"""""""""""""""""""""""""
 let mapleader=","
 let localmapleader=","
+
+" Use ; for : commands
+nnoremap ; :
+
+map <Leader>= <C-w>=
+" Adjust viewports to the same size
 
 nmap <Leader>s :%s/
 vmap <Leader>s :s/
 map <Leader>/ :nohlsearch<cr>
 map <Leader>p :setlocal spell!<cr>
 
+map <C-PageDown> :cnext<cr>
+map <C-PageUp> :cprev<cr>
+
+map <Leader>v :vsp<CR>
+map <Leader>h :hsp<CR>
+
+" Open a file in the same dir as the current file
+cnoremap %% <C-R>=expand('%:h').'/'<cr>
+map <leader>ew :e %%
+map <leader>es :sp %%
+map <leader>ev :vsp %%
+map <leader>et :tabe %%
+
 " Make Y consistent with D and C
 noremap Y y$
 
-map <Leader>v :vsp<CR>
+" Disable K for manpages - not used often and easy to accidentally hit
+noremap K k
 
 vnoremap . :normal .<CR>
 vnoremap @ :normal! @
 
-map <C-PageDown> :cnext<cr>
-map <C-PageUp> :cprev<cr>
+" Wrapped lines goes down/up to next row, rather than next line in file.
+nnoremap j gj
+nnoremap k gk
+
+" Do not exit visual mode when adjusting indentation
+vnoremap < <gv
+vnoremap > >gv
+
+" Write file when you forget to use sudo
+cmap w!! w !sudo tee % >/dev/null
 
 """""""""""""""""""""""""
 " Plugins
@@ -109,6 +140,10 @@ let NERDTreeIgnore=['\.pyc$', '\.pyo$', '\.py\$class$', '\.obj$', '\.o$', '\.so$
 let NERDTreeHighlightCursorline=1
 let NERDTreeShowBookmarks=1
 let NERDTreeShowFiles=1
+
+nnoremap <silent> <leader>gs :Gstatus<CR>
+nnoremap <silent> <leader>gd :Gdiff<CR>
+nnoremap <silent> <leader>gb :Gblame<CR>
 
 " Put a space around comment markers
 let g:NERDSpaceDelims = 1
@@ -137,7 +172,7 @@ let g:quickfixsigns_classes=['qfl', 'vcsdiff', 'breakpoints']
 let g:Powerline_symbols = 'unicode'
 set laststatus=2
 
-let g:ctrlp_map = '<Leader>e'
+let g:ctrlp_map = '<Leader>r'
 let g:ctrlp_custom_ignore = '/\.\|\.o\|\.so'
 let g:ctrlp_regexp = 1
 let g:ctrlp_clear_cache_on_exit = 0
