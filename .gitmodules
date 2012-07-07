@@ -199,3 +199,6 @@
 [submodule "bundle/tmux"]
 	path = bundle/tmux
 	url = https://github.com/zaiste/tmux.vim.git
+[submodule "bundle/snipmate-snippets"]
+	path = bundle/snipmate-snippets
+	url = https://github.com/spf13/snipmate-snippets.git
