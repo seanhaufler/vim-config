@@ -27,7 +27,7 @@ set complete=.,w,b,u,U,t,i,d    " Do lots of scanning on tab completion
 set updatecount=100             " Write swap file to disk every 100 chars
 set directory=~/.vim/swap       " Directory to use for the swap file
 set diffopt=filler,iwhite       " In diff mode, ignore whitespace changes and align unchanged lines
-set history=100                 " Remember 100 commands
+set history=1000                " Remember 1000 commands
 set nrformats+=alpha            " Allow incrementing and decrementing letters
                                 " - the utility of this is limited by the Tim
                                 " Pope plugin that increments Roman Numerals,
