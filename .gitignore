@@ -4,5 +4,6 @@
 doc/tags
 .netrwhist
 /undo
+/view
 vimrc.mine
 gvimrc.mine

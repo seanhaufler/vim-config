@@ -78,6 +78,9 @@ let html_use_css = 1
 let xml_use_xhtml = 1
 
 " Keybindings to native vim features
+" Save/restore view on close/open (folds, cursor, etc.)
+au BufWinLeave *.* silent! mkview
+au BufWinEnter *.* silent! loadview
 let mapleader=","
 let localmapleader=","
 
