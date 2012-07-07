@@ -28,6 +28,7 @@ set updatecount=100             " Write swap file to disk every 100 chars
 set directory=~/.vim/swap       " Directory to use for the swap file
 set diffopt=filler,iwhite       " In diff mode, ignore whitespace changes and align unchanged lines
 set history=1000                " Remember 1000 commands
+set timeoutlen=250              " Shorter timeouts on commands
 set nrformats+=alpha            " Allow incrementing and decrementing letters
                                 " - the utility of this is limited by the Tim
                                 " Pope plugin that increments Roman Numerals,
