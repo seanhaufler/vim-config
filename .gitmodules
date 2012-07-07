@@ -196,3 +196,6 @@
 [submodule "bundle/ack"]
 	path = bundle/ack
 	url = https://github.com/mileszs/ack.vim.git
+[submodule "bundle/tmux"]
+	path = bundle/tmux
+	url = https://github.com/zaiste/tmux.vim.git
