@@ -104,7 +104,7 @@ map <C-PageUp> :cprev<cr>
 " Plugins
 """""""""""""""""""""""""
 nnoremap <C-g> :NERDTreeToggle<cr>
-let NERDTreeIgnore=['\.pyc$', '\.pyo$', '\.py\$class$', '\.obj$', '\.o$', '\.so$', 
+let NERDTreeIgnore=['\.pyc$', '\.pyo$', '\.py\$class$', '\.obj$', '\.o$', '\.so$',
     \ '\.egg$', '^\.git$', '\~$', '\.cmi', '\.cmo']
 let NERDTreeHighlightCursorline=1
 let NERDTreeShowBookmarks=1
