@@ -186,7 +186,7 @@
 	url = https://github.com/pangloss/vim-javascript.git
 [submodule "bundle/soy"]
 	path = bundle/soy
-	url = https://github.com/duganchen/vim-soy.git
+	url = https://github.com/sidnair09/vim-soy.git
 [submodule "bundle/listmaps"]
 	path = bundle/listmaps
 	url = https://github.com/vim-scripts/listmaps.vim.git
