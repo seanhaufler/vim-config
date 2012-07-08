@@ -11,9 +11,15 @@ To update the repository, run
 
     make update
 
-Other Notes
+.mine
 ------------
 
 vimrc.mine and gvimrc.mine contain system-specific settings or other settings
 that should not be part of a general configuration. Thus, they are not tracked
-in the repo. My vimrc.mine and gvim.mine are included as examples.
+in the repo. The vimrc.mine and gvim.mine from one of my machines are included
+as examples.
+
+Compatability
+------------
+
+This should work fine on Linux and Mac OS X. It is untested on Windows.
