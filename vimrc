@@ -174,9 +174,6 @@ set laststatus=2
 
 let g:ctrlp_map = '<Leader>r'
 let g:ctrlp_custom_ignore = '/\.\|\.o\|\.so'
-let g:ctrlp_regexp = 1
-let g:ctrlp_clear_cache_on_exit = 0
-let g:ctrlp_max_depth = 40
 
 noremap <Leader>t= :Tabularize /=<CR>
 noremap <Leader>t: :Tabularize /^[^:]*:\zs/l0l1<CR>
