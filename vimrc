@@ -171,7 +171,7 @@ let g:syntastic_check_on_open=1
 " C and Scala take too long to run, and scss misses imports
 let g:syntastic_mode_map = { 'mode': 'active',
                            \ 'active_filetypes': [],
-                           \ 'passive_filetypes': ['c', 'scss', 'scala'] }
+                           \ 'passive_filetypes': ['c', 'scss', 'html', 'scala'] }
 
 let g:quickfixsigns_classes=['qfl', 'vcsdiff', 'breakpoints']
 
