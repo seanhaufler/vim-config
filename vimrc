@@ -55,6 +55,11 @@ set textwidth=80
 "   n... : where to save the viminfo files
 set viminfo=%100,'100,/100,h,\"500,:100,n~/.vim/viminfo
 
+" ctags: recurse up to home to find tags. See
+" http://stackoverflow.com/questions/563616/vim-and-ctags-tips-and-tricks
+" for an explanation and other ctags tips/tricks
+set tags+=tags;$HOME
+
 " Undo
 set undolevels=10000
 if has("persistent_undo")
