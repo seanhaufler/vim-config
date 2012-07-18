@@ -36,13 +36,14 @@ set nrformats+=alpha            " Allow incrementing and decrementing letters
                                 " Pope plugin that increments Roman Numerals,
                                 " but it's still nice to have.
 
-" Indentation and tabbing
+" Formatting, indentation, and tabbing
 set autoindent smartindent
 set smarttab                    " Make <tab> and <backspace> smarter
 set expandtab
 set tabstop=2
 set shiftwidth=2
 set textwidth=80
+set formatoptions-=t formatoptions+=croql
 
 " viminfo: remember certain things when we exit
 " (http://vimdoc.sourceforge.net/htmldoc/usr_21.html)
