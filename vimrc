@@ -102,6 +102,8 @@ map <Leader>= <C-w>=
 
 nmap <Leader>s :%s/
 vmap <Leader>s :s/
+set gdefault
+
 map <Leader>/ :nohlsearch<cr>
 map <Leader>p :setlocal spell!<cr>
 
