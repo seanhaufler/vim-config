@@ -94,9 +94,6 @@ au BufWinEnter *.* silent! loadview
 let mapleader=","
 let localmapleader=","
 
-" Use ; for : commands
-nnoremap ; :
-
 map <Leader>= <C-w>=
 " Adjust viewports to the same size
 
@@ -133,10 +130,6 @@ vnoremap @ :normal! @
 nnoremap j gj
 nnoremap k gk
 
-" Do not exit visual mode when adjusting indentation
-vnoremap < <gv
-vnoremap > >gv
-
 " Write file when you forget to use sudo
 cmap w!! w !sudo tee % >/dev/null
 
@@ -150,12 +143,14 @@ let NERDTreeHighlightCursorline=1
 let NERDTreeShowBookmarks=1
 let NERDTreeShowFiles=1
 
-nnoremap <silent> <leader>gs :Gstatus<CR>
-nnoremap <silent> <leader>gd :Gdiff<CR>
-nnoremap <silent> <leader>gb :Gblame<CR>
+nnoremap <silent> <Leader>gs :Gstatus<CR>
+nnoremap <silent> <Leader>gd :Gdiff<CR>
+nnoremap <silent> <Leader>gb :Gblame<CR>
 
 " Put a space around comment markers
 let g:NERDSpaceDelims = 1
+
+nnoremap <Leader>a :Ack
 
 nnoremap <C-y> :YRShow<cr>
 let g:yankring_history_dir = '$HOME/.vim'
@@ -189,6 +184,7 @@ noremap <Leader>t: :Tabularize /^[^:]*:\zs/l0l1<CR>
 noremap <Leader>t> :Tabularize /=><CR>
 noremap <Leader>t- :Tabularize /-><CR>
 noremap <Leader>t, :Tabularize /,\zs/l0l1<CR>
+noremap <Leader>t\| :Tabularize /\|<CR>
 
 nnoremap <Leader>b :TagbarToggle<CR>
 
