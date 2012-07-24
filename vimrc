@@ -67,7 +67,7 @@ if has("persistent_undo")
   set undodir=~/.vim/undo       " Allow undoes to persist even after a file is closed
   set undofile
 endif
-nnoremap <C-u> :GundoToggle<CR>
+" nnoremap <C-u> :GundoToggle<CR>
 
 " Search settings
 set ignorecase
@@ -123,6 +123,14 @@ noremap Y y$
 " Disable K for manpages - not used often and easy to accidentally hit
 noremap K k
 
+" kj to escape insert mode
+imap kj <Esc>l
+imap ` <Esc>
+
+let g:ctrlp_map = '<c-p>'
+imap <C-l> :CtrlP<CR>
+imap jkk :CtrlP<CR>
+
 vnoremap . :normal .<CR>
 vnoremap @ :normal! @
 
@@ -132,6 +140,13 @@ nnoremap k gk
 
 " Write file when you forget to use sudo
 cmap w!! w !sudo tee % >/dev/null
+
+" CtrlP plugin invoke by Ctrl-P
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
+" working directory for CtrlP is git repo root
+let g:ctrlp_working_path_mode = 2
 
 """""""""""""""""""""""""
 " Plugins
@@ -229,5 +244,6 @@ set shortmess+=A
 " Toggle paste mode while in insert mode with F12
 set pastetoggle=<F12>
 map <F12> :set invpaste paste?<CR>
+
 
 so ~/.vim/vimrc.mine
