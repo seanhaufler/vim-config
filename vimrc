@@ -1,6 +1,7 @@
 """""""""""""""""""""""""
 " Basic features
 """""""""""""""""""""""""
+
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
@@ -32,9 +33,9 @@ set timeoutlen=1500             " Slightly longer timeout on mappings
 set ttimeoutlen=100             " Shorter timeouts on keycodes
 set virtualedit=onemore         " Allow cursor one beyond last char
 set nrformats+=alpha            " Allow incrementing and decrementing letters
-                                " - the utility of this is limited by the Tim
-                                " Pope plugin that increments Roman Numerals,
-                                " but it's still nice to have.
+" - the utility of this is limited by the Tim
+" Pope plugin that increments Roman Numerals,
+" but it's still nice to have.
 
 " Formatting, indentation, and tabbing
 set autoindent smartindent
@@ -125,7 +126,6 @@ noremap K k
 
 " kj to escape insert mode
 imap kj <Esc>l
-imap ` <Esc>
 
 let g:ctrlp_map = '<c-p>'
 imap <C-l> :CtrlP<CR>
@@ -153,7 +153,7 @@ let g:ctrlp_working_path_mode = 2
 """""""""""""""""""""""""
 nnoremap <C-g> :NERDTreeToggle<cr>
 let NERDTreeIgnore=['\.pyc$', '\.pyo$', '\.py\$class$', '\.obj$', '\.o$', '\.so$',
-    \ '\.egg$', '^\.git$', '\~$', '\.cmi', '\.cmo']
+      \ '\.egg$', '^\.git$', '\~$', '\.cmi', '\.cmo']
 let NERDTreeHighlightCursorline=1
 let NERDTreeShowBookmarks=1
 let NERDTreeShowFiles=1
@@ -183,8 +183,8 @@ let g:syntastic_enable_signs=1
 let g:syntastic_check_on_open=1
 " C and Scala take too long to run, and scss misses imports
 let g:syntastic_mode_map = { 'mode': 'active',
-                           \ 'active_filetypes': [],
-                           \ 'passive_filetypes': ['c', 'scss', 'html', 'scala'] }
+      \ 'active_filetypes': [],
+      \ 'passive_filetypes': ['c', 'scss', 'html', 'scala'] }
 
 let g:quickfixsigns_classes=['qfl', 'vcsdiff', 'breakpoints']
 
@@ -210,13 +210,13 @@ nnoremap <Leader>b :TagbarToggle<CR>
 
 " http://stackoverflow.com/questions/2182427/right-margin-in-vim
 function! s:ToggleColorColumn()
-    if s:color_column_old == 0
-        let s:color_column_old = &colorcolumn
-        windo let &colorcolumn = 0
-    else
-        windo let &colorcolumn=s:color_column_old
-        let s:color_column_old = 0
-    endif
+  if s:color_column_old == 0
+    let s:color_column_old = &colorcolumn
+    windo let &colorcolumn = 0
+  else
+    windo let &colorcolumn=s:color_column_old
+    let s:color_column_old = 0
+  endif
 endfunction
 
 if exists('+colorcolumn')
@@ -227,9 +227,9 @@ endif
 
 " When opening a file, always jump to the last cursor position
 autocmd BufReadPost *
-    \ if line("'\"") > 0 && line ("'\"") <= line("$") |
-    \     exe "normal g'\"" |
-    \ endif |
+      \ if line("'\"") > 0 && line ("'\"") <= line("$") |
+      \     exe "normal g'\"" |
+      \ endif |
 
 " Screen settings
 let g:ScreenImpl = 'Tmux'
