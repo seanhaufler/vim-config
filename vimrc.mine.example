@@ -1,3 +1,10 @@
+set noeb vb t_vb=
+
+nmap <tab> :NERDTreeToggle<CR>
+nmap <c-t> :tabnew<CR>:NERDTreeToggle<CR>
+map <c-c> :noh<CR>
+
+
 set clipboard=unnamed
 
 " xargs on Macs suck
