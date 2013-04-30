@@ -5,6 +5,9 @@
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
+set fileencoding=utf-8
+set bomb
+
 " Display options
 syntax on
 set cursorline
